@@ -1,11 +1,11 @@
-function _49ers () {
+function _49ers2 () {
     _49ers()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
 	
 })
 let extra_velocity = 0
-let _49ers2: Sprite = null
+let _49ers: Sprite = null
 let spaceship = sprites.create(img`
 . . . . . . 1 1 1 1 1 1 1 . . . . . 
 . . . . . 1 1 f 1 f f f 1 1 . . . . 
@@ -36,7 +36,7 @@ game.onUpdateInterval(2000, function () {
 })
 // 49eres
 game.onUpdateInterval(2000, function () {
-    _49ers2 = sprites.create(img`
+    _49ers = sprites.create(img`
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
 4 4 4 4 4 4 4 4 4 4 2 2 2 5 4 4 
@@ -54,7 +54,7 @@ game.onUpdateInterval(2000, function () {
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
 `, SpriteKind.Enemy)
-    _49ers2.setPosition(scene.screenWidth(), Math.randomRange(0, scene.screenHeight()))
+    _49ers.setPosition(scene.screenWidth(), Math.randomRange(0, scene.screenHeight()))
     extra_velocity = 0
     if (true) {
         extra_velocity = Math.randomRange(0, 50)
